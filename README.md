@@ -1,4 +1,8 @@
-# newsapp
+# News App with Rest Api 
+
+## Output:
+![News App Api](https://user-images.githubusercontent.com/30715919/92895045-c6455580-f438-11ea-97ec-59c47226e105.jpg)
+
 
 A new Flutter application.
 
