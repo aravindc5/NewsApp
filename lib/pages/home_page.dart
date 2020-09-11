@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapp/models/news_model.dart';
 import 'package:newsapp/services/api.dart';
@@ -18,7 +19,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    Size mediaquery = MediaQuery.of(context).size;
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
@@ -31,7 +31,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
 Widget widgetSlider(Future<NewsModel> _newsModel) {
   return Column(
-    children: [topSlider(_newsModel)],
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          'Trending News',
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+        ),
+      ),
+      topSlider(_newsModel)
+    ],
   );
 }
 
